@@ -1,16 +1,14 @@
-# Terese Mihalcin
-# Class shortcut (time)
-# shortcut.1.time = 30
+# Jaden Mack
+# Zesty Zippers
 
-# lap counter
 import random
 
-# variables i will need
-totalTimeNoShortcuts = 68
-optimalTimeShortcuts = 52
-mushroomNum = 0
-lapCounter = 0
-lap = 0
+# Variables
+totalTime = 495
+optimalTime = 401
+shroomNum = 0
+lapCount = 0
+laps = 0
 
 
 # seconds
@@ -21,17 +19,25 @@ class Mushroom:
         self.value = value
 
 # returning the value of the mushroom
-    def mushvalue(self):
+    def shroomvalue(self):
         shroomvalue = self.value
         return shroomvalue
 
 # instances of class Mushroom
-mushroomOne = Mushroom(random.randrange(1, 100))
-mushroomTwo = Mushroom(random.randrange(1, 100))
-mushroomThree = Mushroom(random.randrange(1, 100))
-mushroomFour = Mushroom(random.randrange(1, 100))
-mushroomFive = Mushroom(random.randrange(1, 100))
-mushroomSix = Mushroom(random.randrange(1, 100))
+shroomOne = Mushroom(random.randrange(1, 100))
+shroomTwo = Mushroom(random.randrange(1, 100))
+shroomThree = Mushroom(random.randrange(1, 100))
+shroomFour = Mushroom(random.randrange(1, 100))
+shroomFive = Mushroom(random.randrange(1, 100))
+shroomSix = Mushroom(random.randrange(1, 100))
+
+# variable for the value for mushroom one
+shroomOneValue = shroomOne.shroomvalue()
+shroomTwoValue = shroomTwo.shroomvalue()
+shroomThreeValue = shroomThree.shroomvalue()
+shroomFourValue = shroomFour.shroomvalue()
+shroomFiveValue = shroomFive.shroomvalue()
+
 
 # class for shortcut
 class Shortcut:
@@ -40,45 +46,43 @@ class Shortcut:
         # time measured in seconds
 
     def shortcuttime(self):
-        sctime = self.time
-        return sctime
+        shorttime = self.time
+        return shorttime
 
 
 
-shortcutOne = Shortcut(1)
-shortcutTwo = Shortcut(5)
-shortcutThree = Shortcut(7)
+shortcutOne = Shortcut(5)
+shortcutTwo = Shortcut(15)
+shortcutThree = Shortcut(10)
+shortcutFour = Shortcut(5)
+shortcutFive = Shortcut(3)
 
-# variable for the value for mushroom one
-mushroomOneValue = mushroomOne.mushvalue()
-mushroomTwoValue = mushroomTwo.mushvalue()
-mushroomThreeValue = mushroomThree.mushvalue()
-mushroomFourValue = mushroomFour.mushvalue()
-mushroomFiveValue = mushroomFive.mushvalue()
-mushroomSixValue = mushroomSix.mushvalue()
-
-totalShortcutsTaken = 0
+totalShortcuts = 0
 
 # variable for the time of each shortcut
 shortcutOneTime = shortcutOne.shortcuttime()
 shortcutTwoTime = shortcutTwo.shortcuttime()
 shortcutThreeTime = shortcutThree.shortcuttime()
-# while lapCounter <= 3:
+shortcutFourTime = shortcutFour.shortcuttime()
+shortcutFiveTime = shortcutFive.shortcuttime()
 
-if mushroomOneValue <= 45:
-    mushroomNum += 1
-    print("You have", mushroomNum, "mushroom")
+# while lapCount <= 3:
 
-    if mushroomNum >= 1:
-        print("this shortcut takes", shortcutOneTime, "second to travel")
-        print("we will keep going until we reach the next shortcut")
-        print("this shortcut takes", shortcutTwoTime, "seconds to travel, so we will take it")
+if shroomOneValue <= 45:
+    shroomNum += 1
+    print("You have the", shroomNum, "mushroom")
+
+    if shroomNum >= 1:
+        print("This shortcut takes", shortcutOneTime, "seconds to travel.")
+        print("Keep going to the next shortcut.")
+        print("This shortcut takes", shortcutTwoTime, "seconds to travel")
+        print("Keep going to the next shortcut.")
+        print("This shortcut takes", shortcutThreeTime, "seconds to travel")
+        print("Keep going to the next shortcut.")
+        print("This shortcut takes", shortcutFourTime, "seconds to travel")
+        print("Keep going to the next shortcut.")
+        print("This shortcut takes", shortcutFiveTime, "seconds to travel")
 
 
 
-        # check the time of your shortcut
 
-
-
-        # take the shortcut
-        # unless shortcutOne
