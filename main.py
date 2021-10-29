@@ -51,11 +51,18 @@ shortcutThree = Shortcut(7)
 
 # variable for the value for mushroom one
 mushroomOneValue = mushroomOne.mushvalue()
+mushroomTwoValue = mushroomTwo.mushvalue()
+mushroomThreeValue = mushroomThree.mushvalue()
+mushroomFourValue = mushroomFour.mushvalue()
+mushroomFiveValue = mushroomFive.mushvalue()
+mushroomSixValue = mushroomSix.mushvalue()
 
 totalShortcutsTaken = 0
 
 # variable for the time of each shortcut
-shortcutOneTime = shortcutOne.shortcutTime()
+shortcutOneTime = shortcutOne.shortcuttime()
+shortcutTwoTime = shortcutTwo.shortcuttime()
+shortcutThreeTime = shortcutThree.shortcuttime()
 # while lapCounter <= 3:
 
 if mushroomOneValue <= 45:
@@ -64,6 +71,10 @@ if mushroomOneValue <= 45:
 
     if mushroomNum >= 1:
         print("this shortcut takes", shortcutOneTime, "second to travel")
+        print("we will keep going until we reach the next shortcut")
+        print("this shortcut takes", shortcutTwoTime, "seconds to travel, so we will take it")
+
+
 
         # check the time of your shortcut
 
