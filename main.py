@@ -1,6 +1,6 @@
-# Terese Mihalcin
 # loop through each lap
 # while lap < 3
+# mushroomOne
 
 # if random Num > 45 mushroom = false
 # else mushroom = true
@@ -28,10 +28,11 @@ lap = 0
 class Mushroom:
     def __init__(self, value):
         self.value = value
-        # mushroom_num = mushroom_num + 1  mushroom counter ++
+# i dont know how to store the mushroom value and use it later in the big while loop
 
-    def getmushval(self):
-        print(self.value)
+    def mushvalue(self):
+        shroomvalue = self.value
+        return shroomvalue
 
 
 mushroomOne = Mushroom(random.randrange(1, 100))
@@ -40,7 +41,7 @@ mushroomThree = Mushroom(random.randrange(1, 100))
 mushroomFour = Mushroom(random.randrange(1, 100))
 mushroomFive = Mushroom(random.randrange(1, 100))
 mushroomSix = Mushroom(random.randrange(1, 100))
-mushroomOne.getmushval()
+
 
 class Shortcut:
     def __init__(self, time):
@@ -52,11 +53,17 @@ shortcutOne = Shortcut(1)
 shortcutTwo = Shortcut(5)
 shortcutThree = Shortcut(7)
 
-while lapCounter >= 3:
+# while lapCounter <= 3:
+mushroomOneValue = mushroomOne.mushvalue()
 
-    if mushroomOne <= 45:
+mushroomOne.mushvalue()
 
-        mushroomNum += 1
+# while lapCounter >= 3:
+
+if mushroomOneValue <= 45:
+    print(mushroomOneValue)
+    mushroomNum += 1
+    print(mushroomNum)
 
         # take the shortcut
         # unless shortcutOne
