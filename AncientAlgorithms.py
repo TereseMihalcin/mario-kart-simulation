@@ -2,10 +2,11 @@
 # Track: Ancient Algorithms
 
 import random
+import AncientAlgorithms
 
-# variables i will need
-totalTimeNoShortcuts = 68
-optimalTimeShortcuts = 52
+# Variables
+totalTime = 68
+optimalTime = 52
 mushroomNum = 0
 lapCounter = 0
 lap = 0
@@ -17,9 +18,9 @@ class Mushroom:
         self.value = value
 
 # returning the value of the mushroom
-    def mushvalue(self):
-        shroomvalue = self.value
-        return shroomvalue
+    def mushroomvalue(self):
+        mushroomvalue = self.value
+        return mushroomvalue
 
 # instances of class Mushroom
 mushroomOne = Mushroom(random.randrange(1, 100))
@@ -28,6 +29,15 @@ mushroomThree = Mushroom(random.randrange(1, 100))
 mushroomFour = Mushroom(random.randrange(1, 100))
 mushroomFive = Mushroom(random.randrange(1, 100))
 mushroomSix = Mushroom(random.randrange(1, 100))
+
+# variable for the value for mushroom one
+mushroomOneValue = mushroomOne.mushroomvalue()
+mushroomTwoValue = mushroomTwo.mushroomvalue()
+mushroomThreeValue = mushroomThree.mushroomvalue()
+mushroomFourValue = mushroomFour.mushroomvalue()
+mushroomFiveValue = mushroomFive.mushroomvalue()
+mushroomSixValue = mushroomSix.mushroomvalue()
+
 
 # class for shortcut
 class Shortcut:
@@ -44,21 +54,18 @@ shortcutOne = Shortcut(1)
 shortcutTwo = Shortcut(5)
 shortcutThree = Shortcut(7)
 
-# variable for the value for mushroom one
-mushroomOneValue = mushroomOne.mushvalue()
-mushroomTwoValue = mushroomTwo.mushvalue()
-mushroomThreeValue = mushroomThree.mushvalue()
-mushroomFourValue = mushroomFour.mushvalue()
-mushroomFiveValue = mushroomFive.mushvalue()
-mushroomSixValue = mushroomSix.mushvalue()
-
-totalShortcutsTaken = 0
 
 # variable for the time of each shortcut
 shortcutOneTime = shortcutOne.shortcuttime()
 shortcutTwoTime = shortcutTwo.shortcuttime()
 shortcutThreeTime = shortcutThree.shortcuttime()
 
+# while lapCount <= 3:
+
+
+if mushroomOneValue <= 45:
+    mushroomNum += 1
+    print("You have the", mushroomNum, "mushroom")
 
 # ideally I would create an object to iterate over using a for loop and loop through this
 # code three times to represent the three laps
@@ -106,6 +113,7 @@ while lapCounter != 1:
                     print("you have enough mushrooms to take the third shortcut so we will take it")
                     print("you are now at the finish line and have", mushroomNum, "Mushroom(s)")
                     lapCounter += 1
+
             else:
                 if mushroomThreeValue <= 45:
                     mushroomNum += 1
@@ -119,7 +127,3 @@ while lapCounter != 1:
                     print("you could not take any shortcuts this lap")
                     print("you are now at the finish line and have", mushroomNum, "Mushroom(s)")
                     lapCounter += 1
-
-
-
-
